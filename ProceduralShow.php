@@ -25,7 +25,7 @@
     if(isset($_POST['btnSubmit'])){
         $userName = $_POST['txtUserName'];
         $pwd = $_POST['txtPassword'];
-        $sql1 = "INSERT INTO users (username,password) VALUES ('".$userName."',$pwd)";
+        $sql1 = "INSERT INTO users (username,password) VALUES ('$userName','$pwd')";
         echo $sql1;
         if(mysqli_query($conn,$sql1)){
             echo "success<br>";

@@ -18,7 +18,7 @@
         if(isset($_POST['btnSubmit'])){
             $userName = $_POST['txtUserName'];
             $pwd = $_POST['txtPassword'];
-            $sql1 = "INSERT INTO users (username,password) VALUES ('".$userName."',$pwd)";
+            $sql1 = "INSERT INTO users (username,password) VALUES ('$userName','$pwd')";
             if($pdo->exec($sql1)){
                 echo "success<br>";
             }else{
